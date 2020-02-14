@@ -39,6 +39,9 @@ namespace Corgan
                     PlacedPrefab placedPrefab = spawnedObject.GetComponent<PlacedPrefab>();
                     placedPrefab.AddToModelAButton(modelAButton);
                     placedPrefab.AddToModelBButton(modelBButton);
+
+                    // put our spawnedObject into our prefab manager list
+                    PrefabManager.instance.AddPrefabs(spawnedObject);
                 }
             }
         }
