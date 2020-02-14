@@ -6,6 +6,11 @@ namespace Corgan
 {
     public class PlacedPrefab : MonoBehaviour
     {
+        [SerializeField]
+        private bool IsSelected;
+
+        public bool Selected { get { return this.IsSelected; } set { IsSelected = value; } }
+
         public List<GameObject> models = new List<GameObject>();
 
         public void AddToModelAButton(Button modelAButton)
